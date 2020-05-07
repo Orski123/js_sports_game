@@ -13,10 +13,10 @@ resetButton.addEventListener("click",function()
 let NewReset = Number(numberOfReset.innerHTML) + 1;
 numberOfReset.innerHTML=NewReset;
 
-document.getElementById("teamone-numshots").innerHTML="0"; randomOne.style.color="black";
-document.getElementById("teamtwo-numshots").innerHTML="0";randomTwo.style.color="black";
-document.getElementById("teamone-numgoals").innerHTML="0";counter1.style.color="black";
-document.getElementById("teamtwo-numgoals").innerHTML="0";counter2.style.color="black";
+document.getElementById("teamone-numshots").innerHTML="0"; 
+document.getElementById("teamtwo-numshots").innerHTML="0";
+document.getElementById("teamone-numgoals").innerHTML="0";
+document.getElementById("teamtwo-numgoals").innerHTML="0";
 })
 
 teamOneshot.addEventListener("click",function()
@@ -28,16 +28,10 @@ let random1 = Math.floor(Math.random()*10)+1;
 console.log(random1)
 
 if (random1 <= 5){
-    randomOne.innerHTML = 
-    1;
-    randomOne.innerHTML = "GOAL";
-        randomOne.style.color= "blue"
-    }
-
-    else {
-        randomOne.innerHTML = "FAIL";
-        randomOne.style.color= "red"
-    }
+    let goalOne = Number(randomOne.innerHTML ) +1;
+randomOne.innerHTML = goalOne;
+      }
+    
 })
 
 teamTwoshot.addEventListener("click",function()
@@ -47,14 +41,12 @@ let newCountshot = Number(counter2.innerHTML) + 1;
 counter2.innerHTML = newCountshot;
 let random2 = Math.floor(Math.random()*10)+1;
 console.log(random2)
-if (random2 <= 5){
-    randomTwo.innerHTML = "GOAL";
-    randomTwo.style.color= "blue"}   
 
-    else {
-        randomTwo.innerHTML = "FAIL";
-        randomTwo.style.color = "red";
-    }
+if (random2 <= 5){
+    let goalTwo = Number(randomTwo.innerHTML ) +1;
+randomTwo.innerHTML = goalTwo;
+      }
+    
+})
     
 
-})
